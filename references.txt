@@ -1,0 +1,4 @@
+sqlite-python dict
+https://stackoverflow.com/questions/3300464/how-can-i-get-dict-from-sqlite-query
+context managers sqlite3 issues resolved:
+https://stackoverflow.com/questions/10029403/python-why-doesnt-writing-a-contextmanager-for-an-sqlite3-cursor-work
