@@ -1,5 +1,6 @@
 import sqlite3
 from contextlib import closing
+from pprint import pprint
 
 
 class Database:
@@ -27,16 +28,21 @@ class Database:
 def main():
     db = Database()
     # db.add_employees([
-    #     ('John','Smith'),
-    #     ('Joe','Smith')
+    #     ('Emily','Brighton'),
+    #     ('Mark','Jackson')
     # ])
 
     # db.add_employees_dict([
     #     {'firstname': 'Barry', 'lastname': 'Smith'},
     #     {'firstname': 'Amy', 'lastname': 'Larson'},
     # ])
-    print(db.fetch_employees())
     employees = db.fetch_employees()
+
+    # emp[0].i
+    employees_sorted =  sorted(employees, key=lambda x: x['firstname'])
+    ranges = employees_sorted[:7]
+    pprint(sorted(ranges, key=lambda x: x['lastname'], reverse=False))
+    exit(0)
     print('list of employees'.capitalize())
     print('--------------------------------')
     for emp in sorted(employees, key=lambda x: x['firstname']):
